@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarks</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Bookmarker</h1>
+    </div>
+    <div class="container text-center section-two p-3">
+        <h2>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+        </h2>
+        <div class="form">
+            <form>
+                <div class="input-one">
+                    <label for="input-name"><i class="fa-solid fa-book-bookmark pe-2"></i>site name</label>
+                    <input class="form-control " oninput="validateName(this)" autofocus required minlength="3" maxlength="30" id="input-name" type="text" placeholder="Bookmark Name" aria-label="default input example">
+                </div>
+                <div class="alert alert-danger w-75 mx-auto my-2 p-1" id="alert-name">enter 3 character or more</div>
+                <div class="input-two">
+                    <label for="input-url"><i class="fa-solid fa-link pe-2"></i> site url</label>
+                    <input class="form-control" value="https:" oninput="validateUrl(this)" id="input-url" type="text" required minlength="5" placeholder="Website URL" aria-label="default input example">
+                </div>
+                <div class="alert alert-danger w-75 mx-auto my-2 p-1" id="url-name">must be https</div>
+                <div class="input-three">
+                    <label for="input-desc"><i class="fa-solid fa-file"></i> site description</label>
+                    <input class="form-control" oninput="validateDesc(this)" id="input-desc" type="text" placeholder="Website Description ( optional )" aria-label="default input example">
+                </div>
+                <input type="submit" class="btn btn-danger px-5" id="input-save">
+            </form>
+        </div>
+    </div>
+    
+    <section class="mt-4 text-center text-capitalize">
+        <div class="container">
+            <div class="row bg-white py-2">
+                <div class="col-3">
+                    <div class="inner">
+                        <p class="fw-bold fs-6 p-0 m-0">index</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="inner">
+                        <p class="fw-bold fs-6 p-0 m-0">website url</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="inner">
+                        <p class="fw-bold fs-6 p-0 m-0">visit</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="inner">
+                        <p class="fw-bold fs-6 p-0 m-0">delete</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="rowGetIn">
+            <!-- <div class="row text-center text-capitalize p-2 bg-white border-toop" >
+                <div class="col-3">
+                    <p>1</p>
+                </div>
+                <div class="col-3">
+                    <p>hello</p>
+                </div>
+                <div class="col-3">
+                    <a href="http://" target="_blank" class="btn btn-success"><i class="fa-solid fa-eye"></i> Visit </a>
+                </div>
+                <div class="col-3">
+                    <button class="btn btn-danger" onclick="deletePage()"><i class="fa-solid fa-trash"></i> Delete</button>
+                </div>
+            </div> -->
+        </div>
+        
+    </section>
+    
+
+
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
